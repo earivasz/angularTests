@@ -1,0 +1,27 @@
+<multi-step-container class="simple-prev-next" steps="steps" initial-step="1">
+    <header>
+        <button ng-disabled="$isFirst()" class="btn btn-default" ng-click="$previousStep()">
+            <span class="fa fa-chevron-left"></span>
+            Previous
+        </button>
+        
+        <strong ng-bind-template="{{$getActiveIndex()}}. {{$getActiveStep().title}}"></strong>
+
+        <button ng-disabled="$isLast() || ($getActiveStep().hasForm && !$getActiveStep().valid)" class="btn btn-default move-r" ng-click="$nextStep()">
+            Next
+            <span class="fa fa-chevron-right"></span>
+        </button>
+    </header>
+    <hr style="color: #0056b2;" />
+    <step-container class="multi-step-body">
+        <div class="form-step" name="formDiv">
+            <!-- The current step -->
+        </div>
+    </step-container>
+    <hr style="color: #0056b2;" />
+    <div >
+        <button class="btn btn-danger" ng-click="clearAll()" style="">Cancel</button>
+        <button ng-show="$isLast()" class="btn btn-success" ng-click="$finish()" style="margin-left: 5px">Finish me!</button>
+    </div>
+    <pre>user = {{newUser | json}}</pre>
+</multi-step-container >

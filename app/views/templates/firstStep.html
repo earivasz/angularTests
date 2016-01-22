@@ -1,0 +1,12 @@
+<form validate name="myForm" form-step-validity>
+	<input name="userName" type="text" ng-model="newUser.userName" placeholder="Ingrese el nombre" ng-minlength="3" ng-maxlength = "15" required>
+	<strong ng-if="$getActiveStep().hasForm" class="fa" ng-class="myForm.userName.$valid ? 'fa-check' : 'fa-times'"></strong>
+	<br/>
+	<input name="userLastName" type="email" ng-model="newUser.app" placeholder="Ingrese el apellido" ng-minlength="3" ng-maxlength = "15" required>
+	<strong ng-if="$getActiveStep().hasForm" class="fa" ng-class="myForm.userLastName.$valid ? 'fa-check' : 'fa-times'"></strong>
+</form>
+<!--<pre>user = {{newUser | json}}</pre>
+<pre>{{$getActiveStep().valid}}</pre>
+<pre>{{$getActiveStep().hasForm}}</pre>
+<pre>{{myForm.userLastName.$valid}}</pre>
+<pre>{{restUrl}}</pre>-->

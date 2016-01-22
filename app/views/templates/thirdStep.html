@@ -1,0 +1,8 @@
+<form validate name="myForm3" form-step-validity>
+	<div ng-repeat="rol in roles" ng-class="{'move-l' : rol.id%2 != 0}">
+		<label>
+			<input type="checkbox" checklist-model="newUser.rolesBpm" checklist-value="rol.id">
+			{{rol.name}}
+		</label>
+	</div>
+</form>
