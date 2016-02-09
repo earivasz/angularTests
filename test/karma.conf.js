@@ -35,6 +35,7 @@ module.exports = function(config) {
       'bower_components/angular-ui-sortable/sortable.js',
       'bower_components/angular-multi-step-form/dist/browser/angular-multi-step-form.js',
       'bower_components/checklist-model/checklist-model.js',
+      'bower_components/ng-table/dist/ng-table.min.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

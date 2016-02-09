@@ -19,7 +19,8 @@ angular
     'ui.sortable',
     'multiStepForm',
     'checklist-model',
-    'ngRoute'
+    'ngRoute',
+    'ngTable'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -32,6 +33,11 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
+      })
+      .when('/table', {
+        templateUrl: 'views/table.html',
+        controller: 'TableCtrl',
+        controllerAs: 'table'
       })
       .otherwise({
         redirectTo: '/'
